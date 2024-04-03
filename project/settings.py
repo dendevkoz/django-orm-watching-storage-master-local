@@ -18,15 +18,15 @@ DATABASES = {
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = env.str("DB_SECRET_KEY")
+SECRET_KEY = env.str('DB_SECRET_KEY')
 
-DEBUG = env.bool("DEBUG_VALUE", False)
+DEBUG = env.bool('DEBUG_VALUE', False)
 
 ROOT_URLCONF = 'project.urls'
 
 ALLOWED_HOSTS = {
-    "default": {
-        "ALLOWED_HOSTS": env.list('ALLOWED_HOSTS'),
+    'default': {
+        'ALLOWED_HOSTS': env.list('ALLOWED_HOSTS'),
     }
 }
 
