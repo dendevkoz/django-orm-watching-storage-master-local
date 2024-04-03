@@ -7,12 +7,12 @@ def storage_information_view(request):
     visitor_now_in_storage = Visit.objects.filter(leaved_at=None)
     for visit in visitor_now_in_storage:
         duration = visit.get_duration()
-        format_time = visit.format_duration(duration)
+        formatted_time = visit.format_duration(duration)
         is_strange = visit.is_visit_long(duration)
         visitor = {
             'who_entered': visit.passcard.owner_name,
             'entered_at': visit.entered_at,
-            'duration': format_time,
+            'duration': formatted_time,
             'is_strange': is_strange,
         }
         visitors_in_storage.append(visitor)
