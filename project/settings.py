@@ -26,7 +26,7 @@ ROOT_URLCONF = 'project.urls'
 
 ALLOWED_HOSTS = {
     'default': {
-        'ALLOWED_HOSTS': env.list('ALLOWED_HOSTS'),
+        'ALLOWED_HOSTS': env.list('ALLOWED_HOSTS', ['*']),
     }
 }
 
